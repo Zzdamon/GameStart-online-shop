@@ -5,6 +5,7 @@ import { ReactComponent as Google } from '../assets/icons/google.svg';
 import './Login.css'
 import { connect } from 'react-redux';
 import { loginUser } from '../redux/actions/user';
+import { signInWithFacebook } from '../apis/firebase/firebase';
 
 class Login extends React.Component {
 
@@ -31,6 +32,13 @@ class Login extends React.Component {
                     <Google className="w-50 mr-3"/>
                     <span className="text-nowrap">Loghează-te cu Google</span>
                 </button>
+                <button
+                    className="btn btn-outline-dark d-flex align-items-center"
+                    onClick={() => this.props.signInWithFacebook()}
+                >
+                    <Google className="w-50 mr-3"/>
+                    <span className="text-nowrap">Loghează-te cu Facebook</span>
+                </button>
             </div>
         );
     }
@@ -44,7 +52,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        signInWithGoogle: () => dispatch(loginUser())
+        signInWithGoogle: () => dispatch(loginUser("google")),
+        signInWithFacebook: () => dispatch(loginUser("facebook"))
     }
 }
 

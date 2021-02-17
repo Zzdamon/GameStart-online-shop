@@ -1,11 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyCcbZMkwd4ZV_1DiH0R3TZFCg9GKaIMeoM",
-    authDomain: "react-sirluggia-shop.firebaseapp.com",
-    databaseURL: "https://react-sirluggia-shop.firebaseio.com",
-    projectId: "react-sirluggia-shop",
-    storageBucket: "react-sirluggia-shop.appspot.com",
-    messagingSenderId: "184253035461",
-    appId: "1:184253035461:web:20fe5c173c7675c74c51ac"
-};
+    apiKey: "AIzaSyCYBCOOsIr6fvoHiLq32sjSnz39oU30hEc",
+    authDomain: "online-shop-60b5c.firebaseapp.com",
+    projectId: "online-shop-60b5c",
+    storageBucket: "online-shop-60b5c.appspot.com",
+    messagingSenderId: "1011495862809",
+    appId: "1:1011495862809:web:3d0e1bf1983ef7087be088"
+  };
 
 export default firebaseConfig;

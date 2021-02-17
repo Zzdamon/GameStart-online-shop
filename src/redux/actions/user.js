@@ -1,4 +1,4 @@
-import { signInWithGoogle, signOut } from '../../apis/firebase/firebase';
+import { signInWithGoogle, signInWithFacebook, signOut } from '../../apis/firebase/firebase';
 
 function startLoading() {
     return {
@@ -18,15 +18,27 @@ function updateUserError(payload) {
     }
 }
 
-export function loginUser() {
+
+//Hihg order function - maybe
+
+export function loginUser(provider) { 
     return (dispatch) => {
         dispatch(startLoading());
+        if(provider==="google"){
 
-        signInWithGoogle().then(userData => {
-            dispatch(updateUserData(userData.user));
-        }).catch(error => {
-            dispatch(updateUserError(error));
-        });
+            signInWithGoogle().then(userData => {
+                dispatch(updateUserData(userData.user));
+            }).catch(error => {
+                dispatch(updateUserError(error));
+            });
+        }
+        else if(provider==="facebook"){
+            signInWithFacebook().then(userData => {
+                dispatch(updateUserData(userData.user));
+            }).catch(error => {
+                dispatch(updateUserError(error));
+            });
+        }
     }
 }
 
