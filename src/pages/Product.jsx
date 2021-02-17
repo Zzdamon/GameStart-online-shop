@@ -4,15 +4,20 @@ import products from '../utils/products.json';
 import './Product.css';
 import { connect } from 'react-redux';
 import { addToCart } from '../redux/actions/cart';
+import { addToFavourites, removeFromFavourites } from '../redux/actions/favourites';
+import  { ReactComponent as Favourite} from '../assets/icons/favourite.svg'
+import  { ReactComponent as UnFavourite} from '../assets/icons/favFill.svg'
 
 class Product extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            product: {}
+            product: {},
+            favourite: false
         }
     }
 
+   
     componentDidMount() {
         const { match } = this.props;
         const productId = match.params.productId;
@@ -26,7 +31,19 @@ class Product extends React.Component {
         const currentProduct = productItems.find(product => {
             return Number(productId) === product.id;
         });
-        this.setState({product: currentProduct});
+        let fav=false;
+        this.props.favourites.map((prod)=>{
+            // console.log(prod.id)
+            // console.log(id)
+
+            if(prod.id===this.state.product.id){
+                    fav=true;
+            }
+            return prod;
+    })
+
+        this.setState({product: currentProduct,
+        favourite:fav});
     }
 
     render() {
@@ -58,6 +75,27 @@ class Product extends React.Component {
                             >
                                 Adaugă în coș
                             </button>
+            {this.state.favourite===true?
+            <UnFavourite
+            onClick={
+                ()=>{ 
+                    this.props.removeFromFavourites(product)
+                    this.setState({favourite:false});
+           }
+                
+            }
+            />
+            : <Favourite
+             onClick={
+                // console.log("fav click")
+                
+                () =>{this.props.addToFavourites(product)
+                    this.setState({favourite:true});
+                }
+                
+            }
+             />
+            }
                             <p><span className="font-weight-bold">Mărime</span>: {product.size}</p>
                             <p><span className="font-weight-bold">Culoare</span>: {product.colour}</p>
                             <p><span className="font-weight-bold">Material</span>: {product.material}</p>
@@ -74,8 +112,16 @@ class Product extends React.Component {
 
 function mapDispatchToProps(dispatch) {
     return {
-        addToCart: (payload) => dispatch(addToCart(payload))
+        addToCart: (product) => dispatch(addToCart(product)),
+        addToFavourites: (product) => dispatch(addToFavourites(product)),
+        removeFromFavourites: (product)=>dispatch(removeFromFavourites(product))
+
+    };
+}
+function mapStateToProps(state) {
+    return {
+      favourites:state.favourites.products
     }
 }
 
-export default connect(null, mapDispatchToProps)(Product);
+export default connect(mapStateToProps,mapDispatchToProps)(Product);
