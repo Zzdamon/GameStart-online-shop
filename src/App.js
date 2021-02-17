@@ -9,6 +9,8 @@ import Category from './pages/Category';
 import Cart from './pages/Cart';
 import './utils/utility-classes.css';
 import Product from './pages/Product';
+import Favourites from './pages/Favourites';
+
 
 function App() {
   return(
@@ -18,6 +20,7 @@ function App() {
         <Route exact path="/" component={Home}/>
         <Route path="/cart" component={Cart}/>
         <Route path="/about" component={About}/>
+        <Route path="/favourites" component={Favourites}/>
         <Route path="/category/:categoryName" component={Category}/>
         <Route path="/product/:productId" component={Product}/>
         <Route path="*" component={Page404}/>
