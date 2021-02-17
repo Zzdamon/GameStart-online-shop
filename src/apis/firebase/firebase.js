@@ -11,10 +11,10 @@ export const signOut = function() {
     return firebase.auth().signOut();
 }
 
-export const signInWithGoogle = function() {
-    return firebase.auth().signInWithPopup(googleProvider);
+export const signIn = function(provider) {
+    if(provider==="google")
+        return firebase.auth().signInWithPopup(googleProvider);
+    else if(provider==="facebook")
+        return firebase.auth().signInWithPopup(facebookProvider);    
 }
 
-export const signInWithFacebook = function() {
-    return firebase.auth().signInWithPopup(facebookProvider);
-}
