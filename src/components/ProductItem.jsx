@@ -65,7 +65,7 @@ console.log("product item call")
             </Link>
             <button
                 className="btn btn-outline-dark"
-                onClick={() => this.props.addToCart({
+                onClick={() => props.addToCart({
                     product: {
                         id,
                         name,

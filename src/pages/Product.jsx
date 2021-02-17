@@ -33,10 +33,11 @@ class Product extends React.Component {
         });
         let fav=false;
         this.props.favourites.map((prod)=>{
-            // console.log(prod.id)
-            // console.log(id)
+            console.log("product state vs prod id")
+            console.log(currentProduct.id)
+            console.log(prod.id)
 
-            if(prod.id===this.state.product.id){
+            if(prod.id===currentProduct.id){
                     fav=true;
             }
             return prod;
