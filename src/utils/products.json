@@ -6,7 +6,7 @@
                 "name": "Cyberpunk 2077",
                 "price": 270,
                 "currency": "LEI",
-                "image": "https://i.imgur.com/Rz8lVQa.jpg",
+                "image": "https://i.imgur.com/EpGHjon.jpg",
                 "rating": 18,
                 "type": "RPG",
                 "platform": "PC",
@@ -18,7 +18,7 @@
                 "name": "Red Dead Redemption 2",
                 "price": 150,
                 "currency": "LEI",
-                "image": "https://i.imgur.com/Og3Oh24.jpg",
+                "image": "https://i.imgur.com/keQJtPp.jpg",
                 "rating": 18,
                 "type": "Actiune",
                 "platform": "PC",
@@ -30,7 +30,7 @@
                 "name": "Grand Theft Auto 5",
                 "price": 120,
                 "currency": "LEI",
-                "image": "https://i.imgur.com/zoqSu87.jpg",
+                "image": "https://i.imgur.com/bn7gVcu.jpg",
                 "rating": 18,
                 "type": "Actiune",
                 "platform": "PC",
@@ -38,7 +38,7 @@
                 "description": "Noice"
             }
         ],
-        "image": "https://i.imgur.com/J0bybvfl.png",
+        "image": "https://i.imgur.com/J0bybvf.png?1",
         "name": "PC games",
         "description": "Best and latest PC games"
     },
@@ -49,7 +49,7 @@
                 "name": "Marvel's Spider-Man",
                 "price": 125,
                 "currency": "LEI",
-                "image": "https://i.imgur.com/6afzuEr.jpg",
+                "image": "https://i.imgur.com/DqJYywH.jpg",
                 "rating": "16+",
                 "type": "Action/Adventure",
                 "platform": "Playstation 4",
@@ -61,7 +61,7 @@
                 "name": "Need for Speed Heat",
                 "price": 109,
                 "currency": "LEI",
-                "image": "https://i.imgur.com/6afzuEr.jpg",
+                "image": "https://i.imgur.com/wFh41N2.jpg",
                 "rating": "16",
                 "type": "Racing",
                 "platform": "Playstation 4",
@@ -73,7 +73,7 @@
                 "name": "Need for Speed Payback",
                 "price": 92,
                 "currency": "LEI",
-                "image": "https://i.imgur.com/6afzuEr.jpg",
+                "image": "https://i.imgur.com/ilAIf2Z.jpg",
                 "rating": "16",
                 "type": "Racing",
                 "platform": "Playstation 4",
@@ -85,7 +85,7 @@
                 "name": "The Last of Us Part II",
                 "price": 150,
                 "currency": "LEI",
-                "image": "https://i.imgur.com/6afzuEr.jpg",
+                "image": "https://i.imgur.com/qFWuIwt.jpg",
                 "rating": "18",
                 "type": "Action/Adventure",
                 "platform": "Playstation 4",
@@ -104,7 +104,7 @@
                 "name": "Need for Speed Heat",
                 "price": 109,
                 "currency": "LEI",
-                "image": "https://i.imgur.com/6afzuEr.jpg",
+                "image": "https://i.imgur.com/K2n40xn.jpg",
                 "rating": "16",
                 "type": "Racing",
                 "platform": "Xbox One",
@@ -116,7 +116,7 @@
                 "name": "Need for Speed Payback",
                 "price": 92,
                 "currency": "LEI",
-                "image": "https://i.imgur.com/6afzuEr.jpg",
+                "image": "https://i.imgur.com/eFGyJIG.jpg",
                 "rating": "16",
                 "type": "Racing",
                 "platform": "Xbox One",
@@ -124,7 +124,7 @@
                 "description": "Good racing game"
             }
         ],
-        "image": "https://i.imgur.com/5yH1zeyl.jpg",
+        "image": "https://i.imgur.com/SVxiygR.jpg?1",
         "name": "Xbox One",
         "description": "The worse console"
     },
@@ -135,7 +135,7 @@
                 "name": "Marvel's Spider-Man: Miles Morales",
                 "price": 269,
                 "currency": "LEI",
-                "image": "https://i.imgur.com/IXrZitQ.jpg",
+                "image": "https://i.imgur.com/pwTewpN.jpg",
                 "rating": 16,
                 "type": "Action/Adventure",
                 "platform": "Playstation 5",
@@ -144,18 +144,18 @@
             },
             {
                 "id": 11,
-                "name": "Cyberpunk 2077",
-                "price": 270,
+                "name": "Joc Devil May Cry 5 Special Edition",
+                "price": 160,
                 "currency": "LEI",
-                "image": "https://i.imgur.com/Rz8lVQa.jpg",
+                "image": "https://i.imgur.com/mvCN2x1.jpg",
                 "rating": 18,
-                "type": "RPG",
+                "type": "Action",
                 "platform": "Playstation 5",
-                "brand": "CD Projekt Red",
-                "description": "Haven't played this yet"
+                "brand": "Capcom",
+                "description": "Demons and stuff"
             }
         ],
-        "image": "https://i.imgur.com/81I6Oab.jpg",
+        "image": "https://i.imgur.com/jcgiQS7.jpg?1",
         "name": "Playstation 5",
         "description": "It has like 3 games"
     },
@@ -163,14 +163,14 @@
         "items": [
             {
                 "id": 12,
-                "name": "Cyberpunk 2077",
-                "price": 270,
+                "name": "HITMAN 3",
+                "price": 320,
                 "currency": "LEI",
-                "image": "https://i.imgur.com/Rz8lVQa.jpg",
+                "image": "https://i.imgur.com/lwvZWUH.jpg",
                 "rating": 18,
-                "type": "RPG",
+                "type": "Action",
                 "platform": "Xbox Series X",
-                "brand": "CD Projekt Red",
+                "brand": "Square Enix",
                 "description": "Haven't played this yet"
             },
             {
@@ -178,7 +178,7 @@
                 "name": "FIFA 21",
                 "price": 187,
                 "currency": "LEI",
-                "image": "https://i.imgur.com/4BbF4TO.jpg",
+                "image": "https://i.imgur.com/fgkACrl.jpg",
                 "rating": 3,
                 "type": "Sport",
                 "platform": "Xbox Series X",
@@ -186,7 +186,7 @@
                 "description": "Another FIFA game"
             }
         ],
-        "image": "https://i.imgur.com/l27WtFL.jpg",
+        "image": "https://i.imgur.com/ocDmVYi.jpg?1",
         "name": "Xbox Series X",
         "description": "Just another Xbox"
     },
@@ -197,7 +197,7 @@
                 "name": "Animal Crossing",
                 "price": 85,
                 "currency": "LEI",
-                "image": "https://i.imgur.com/rSVUiLO.jpg",
+                "image": "https://i.imgur.com/s9Dy1Qq.jpg",
                 "rating": 3,
                 "type": "RPG",
                 "platform": "Nintendo Switch",
@@ -205,7 +205,7 @@
                 "description": "A nice casual game"
             }
         ],
-        "image": "https://i.imgur.com/qw3wDj8.jpg",
+        "image": "https://i.imgur.com/VBOQ1me.jpg?1",
         "name": "Nintendo Switch",
         "description": "A nice fun console"
     }
