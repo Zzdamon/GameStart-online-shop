@@ -15,7 +15,7 @@ function Favourites(props) {
                 d-flex flex-column justify-content-center align-items-center">
             
             {props.favourites.length>0
-            ?<div class="container-fluid container-min-max-width">
+            ?<div className="container-fluid container-min-max-width">
                 <h3>Produsele tale favorite:</h3>
                     <ProductList products={props.favourites}></ProductList>
             
