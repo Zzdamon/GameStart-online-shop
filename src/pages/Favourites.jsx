@@ -3,6 +3,7 @@ import ProductItem from '../components/ProductItem';
 import { connect } from 'react-redux';
 import Layout from '../components/Layout';
 import { Link } from 'react-router-dom';
+import ProductList from '../components/ProductList';
 
 
 function Favourites(props) {
@@ -14,16 +15,11 @@ function Favourites(props) {
                 d-flex flex-column justify-content-center align-items-center">
             
             {props.favourites.length>0
-            ?<div>
+            ?<div class="container-fluid container-min-max-width">
                 <h3>Produsele tale favorite:</h3>
-                <div className="container-fluid d-flex flex-wrap" >
-            {
-             props.favourites.map(product=>
-                <ProductItem
-                {...product}
-                key={product.id}/>)
-            }
-                </div>
+                    <ProductList products={props.favourites}></ProductList>
+            
+                
             </div>
             :<div className="d-flex flex-column align-items-center">
                         <p className="h3">Nu ai produse favorite!</p>

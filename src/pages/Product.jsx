@@ -58,7 +58,7 @@ class Product extends React.Component {
                         <div className="image-wrapper d-flex mr-5">
                             <img src={product.image} alt="Product presentation"/>
                         </div>
-                        <div className="product-details">
+                        <div className="product-details d-flex flex-column">
                             <p className="h3 text-danger">{product.price} {product.currency}</p>
                             <button
                                 className="btn btn-dark mb-4 font-weight-bold"
@@ -76,27 +76,37 @@ class Product extends React.Component {
                             >
                                 Adaugă în coș
                             </button>
+            
             {this.state.favourite===true?
-            <UnFavourite
+            <button className="btn btn-dark mb-4 font-weight-bold d-flex align-items-center"
             onClick={
                 ()=>{ 
                     this.props.removeFromFavourites(product)
                     this.setState({favourite:false});
-           }
+                    }        
                 
-            }
-            />
-            : <Favourite
-             onClick={
+                    }
+            >
+                Remove from favourites
+                <UnFavourite/>
+            </button>
+            
+            :<button className="btn btn-dark mb-4 font-weight-bold d-flex align-items-center"
+            onClick={
                 // console.log("fav click")
                 
                 () =>{this.props.addToFavourites(product)
                     this.setState({favourite:true});
-                }
+                    }
                 
-            }
+                    }>
+            Add to favourites
+             <Favourite
+             
              />
+             </button>
             }
+            
                             <p><span className="font-weight-bold">Tip joc</span>: {product.type}</p>
                             <p><span className="font-weight-bold">Platforma</span>: {product.platform}</p>
                             <p><span className="font-weight-bold">Rating PEGI</span>: {product.rating}</p>
