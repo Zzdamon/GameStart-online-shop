@@ -1,10 +1,12 @@
+import * as CartConstants from './CartConstants'
+
 const initialState = {
     products: []
 }
 
 export function cartReducer(state = initialState, action) {
     switch (action.type) {
-        case 'ADD_TO_CART':
+        case CartConstants.add:
             let productInCart = false;
             const updatedProducts = state.products.map(product => {
                 if (product.id === action.payload.product.id) {
@@ -33,7 +35,7 @@ export function cartReducer(state = initialState, action) {
                     products: updatedProducts
                 });
             }
-        case 'REMOVE_FROM_CART':
+        case CartConstants.rm:
             const filteredProducts = state.products.filter(product => {
                 return product.id !== action.payload.id
             });

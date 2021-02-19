@@ -1,9 +1,9 @@
 import React from 'react';
 import './ProductItem.css';
 import { connect } from 'react-redux';
-import { addToCart } from '../redux/actions/cart';
+import { addToCart } from '../redux/cart/CartActions';
 import { Link } from 'react-router-dom';
-import { addToFavourites, removeFromFavourites } from '../redux/actions/favourites';
+import { addToFavourites, removeFromFavourites } from '../redux/favourites/FavouritesActions';
 import  { ReactComponent as Favourite} from '../assets/icons/favourite.svg'
 import  { ReactComponent as UnFavourite} from '../assets/icons/favFill.svg'
 
@@ -63,8 +63,9 @@ console.log("product item call")
                 <p className="mb-1 text-center">{ name }</p>
                 <p className="text-center">{ price + currency }</p>
             </Link>
+            <div>
             <button
-                className="btn btn-outline-dark"
+                className="btn btn-outline-primary"
                 onClick={() => props.addToCart({
                     product: {
                         id,
@@ -78,8 +79,9 @@ console.log("product item call")
                 Adaugă în coș
             </button>
 
-            {fav===true?
-            <UnFavourite
+            {fav===true?            
+            <div className="tp">
+            <UnFavourite  className="favBtn m-1"
             onClick={
                 ()=>props.removeFromFavourites(
                     {
@@ -93,8 +95,9 @@ console.log("product item call")
                 }
                 )
             }
-            />
-            : <Favourite
+            /> <span className="tptext">Remove from favourites</span></div>
+            : <div className="tp"> 
+            <Favourite className="favBtn m-1"
              onClick={
                 // console.log("fav click")
                 () => props.addToFavourites({
@@ -107,9 +110,11 @@ console.log("product item call")
                     
                 })}
              />
+             <span className="tptext">Add to favourites</span>
+            </div>
             }
-        </div>
-    );
+</div>        </div>
+    );    
     }
 
 

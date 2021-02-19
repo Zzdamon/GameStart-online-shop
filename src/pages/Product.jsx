@@ -3,8 +3,8 @@ import Layout from '../components/Layout';
 import products from '../utils/products.json';
 import './Product.css';
 import { connect } from 'react-redux';
-import { addToCart } from '../redux/actions/cart';
-import { addToFavourites, removeFromFavourites } from '../redux/actions/favourites';
+import { addToCart } from '../redux/cart/CartActions';
+import { addToFavourites, removeFromFavourites } from '../redux/favourites/FavouritesActions';
 import  { ReactComponent as Favourite} from '../assets/icons/favourite.svg'
 import  { ReactComponent as UnFavourite} from '../assets/icons/favFill.svg'
 
@@ -61,7 +61,7 @@ class Product extends React.Component {
                         <div className="product-details d-flex flex-column">
                             <p className="h3 text-danger">{product.price} {product.currency}</p>
                             <button
-                                className="btn btn-dark mb-4 font-weight-bold"
+                                className="btn btn-primary mb-1 font-weight-bold"
                                 onClick={() => {
                                     this.props.addToCart({
                                         product: {
@@ -78,7 +78,7 @@ class Product extends React.Component {
                             </button>
             
             {this.state.favourite===true?
-            <button className="btn btn-dark mb-4 font-weight-bold d-flex align-items-center"
+            <button className="btn btn-danger mb-4 font-weight-bold d-flex align-items-center"
             onClick={
                 ()=>{ 
                     this.props.removeFromFavourites(product)
@@ -88,10 +88,11 @@ class Product extends React.Component {
                     }
             >
                 Remove from favourites
-                <UnFavourite/>
+                <UnFavourite className="ml-1"/>
             </button>
             
-            :<button className="btn btn-dark mb-4 font-weight-bold d-flex align-items-center"
+            :<button className="btn btn-outline-danger mb-4 font-weight-bold d-flex
+            justify-content-center align-items-center"
             onClick={
                 // console.log("fav click")
                 
@@ -102,7 +103,7 @@ class Product extends React.Component {
                     }>
             Add to favourites
              <Favourite
-             
+             className="ml-1"
              />
              </button>
             }

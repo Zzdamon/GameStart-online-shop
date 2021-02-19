@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { cartReducer } from './reducers/cart';
-import { userReducer } from './reducers/user';
-import {favouritesReducer} from './reducers/favourites'
+import { cartReducer } from './cart/CartReducer';
+import { userReducer } from './user/UserReducer';
+import {favouritesReducer} from './favourites/FavouritesReducer'
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 

@@ -1,3 +1,5 @@
+import * as UserConstants from './UserConstants'
+
 const initialState = {
     data: null,
     loading: false,

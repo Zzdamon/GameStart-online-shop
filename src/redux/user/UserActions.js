@@ -1,19 +1,20 @@
 import { signIn, signOut } from '../../apis/firebase/firebase';
+import * as UserConstants from './UserConstants'
 
 function startLoading() {
     return {
-        type: 'START_LOADING'
+        type: UserConstants.startLoading
     }
 }
 function updateUserData(payload) {
     return {
-        type: 'UPDATE_USER_DATA',
+        type: UserConstants.updateUserData,
         payload
     }
 }
 function updateUserError(payload) {
     return {
-        type: 'UPDATE_USER_ERROR',
+        type: UserConstants.updateUserError,
         payload
     }
 }

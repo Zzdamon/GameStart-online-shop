@@ -1,13 +1,15 @@
+import * as CartConstants from './CartConstants'
+
 export function addToCart(payload) {
     return {
-        type: 'ADD_TO_CART',
+        type: CartConstants.add,
         payload
     }
 }
 
 export function removeFromCart(payload) {
     return {
-        type: 'REMOVE_FROM_CART',
+        type: CartConstants.rm,
         payload
     }
 }
