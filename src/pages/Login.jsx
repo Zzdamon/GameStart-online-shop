@@ -24,21 +24,21 @@ class Login extends React.Component {
                 </Link>
 
                 <h1 className="h2">Login</h1>
-                <p>Alege providerul cu care vrei să vrei să te loghezi:</p>
+                <p>What do you want to login with?</p>
 
                 <button
                     className="btn btn-outline-dark d-flex align-items-center"
                     onClick={() => this.props.signInWithGoogle()}
                 >
                     <Google className="w-50 mr-3"/>
-                    <span className="text-nowrap">Loghează-te cu Google</span>
+                    <span className="text-nowrap">Login with Google</span>
                 </button>
                 <button
                     className="btn btn-outline-dark d-flex align-items-center"
                     onClick={() => this.props.signInWithFacebook()}
                 >
                     <Facebook className="w-50 mr-3"/>
-                    <span className="text-nowrap">Loghează-te cu Facebook</span>
+                    <span className="text-nowrap">Login with Facebook</span>
                 </button>
             </div>
         );

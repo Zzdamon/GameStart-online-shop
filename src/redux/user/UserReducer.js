@@ -1,24 +1,25 @@
 import * as UserConstants from './UserConstants'
-
+let initialUser=JSON.parse(localStorage.getItem("game-start-user"));
 const initialState = {
-    data: null,
+    data: initialUser,
     loading: false,
     error: null
 };
 
 export function userReducer(state = initialState, action) {
     switch (action.type) {
-        case 'START_LOADING':
+        case UserConstants.startLoading:
             return Object.assign({}, state, {
                 loading: true
             });
-        case 'UPDATE_USER_DATA':
+        case UserConstants.updateUserData:
+            localStorage.setItem("game-start-user",JSON.stringify(action.payload));
             return Object.assign({}, state, {
                 data: action.payload,
                 loading: false,
                 error: null
             });
-        case 'UPDATE_USER_ERROR':
+        case UserConstants.updateUserError:
             return Object.assign({}, state, {
                 error: action.payload,
                 loading: false
