@@ -57,13 +57,14 @@ console.log("product item call")
         
 
     return(
-        <div className="product-item col-12 col-md-4 mb-3 d-flex flex-column align-items-center">
+        <div className="product-item d-flex mx-2 p-1 pb-4 mb-2 d-flex flex-column align-items-center border border-dark rounded">
             <Link to={`/product/${id}`} className="d-flex flex-column align-items-center">
                 <img src={image} alt="productPhoto" className="mb-2"/>
-                <p className="mb-1 text-center">{ name }</p>
-                <p className="text-center">{ price + currency }</p>
+                <h6 className="my-2 text-center">{ name }</h6>
+                <h5 className="my-1 text-center">{ price + currency }</h5>
             </Link>
-            <div>
+
+            <div className=" mt-3">
             <button
                 className="btn btn-outline-primary"
                 onClick={() => props.addToCart({
@@ -113,7 +114,8 @@ console.log("product item call")
              <span className="tptext">Add to favourites</span>
             </div>
             }
-</div>        </div>
+            </div>       
+        </div>
     );    
     }
 
