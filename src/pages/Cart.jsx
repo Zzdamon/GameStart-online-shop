@@ -54,8 +54,11 @@ function Cart(props) {
                                 </p>
                             </div>
                         </div>
+                        <div className="container-min-max-width d-flex justify-content-end">
+                                <button className="btn w-25 btn-success mw-6">Order</button>
+                                 </div>
                     </div>
-                    : <div className="d-flex flex-column align-items-center">
+                    : <div className="d-flex w-25 flex-column align-items-center">
                         <p className="h3">Nu ai produse în coș!</p>
                         <Link to="/"><button className="btn btn-outline-dark">Inapoi la home</button></Link>
                     </div>

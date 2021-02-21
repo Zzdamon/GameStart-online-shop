@@ -1,7 +1,11 @@
 import * as CartConstants from './CartConstants'
 
+let initialCart=JSON.parse(localStorage.getItem("game-start-cart"));
+initialCart? initialCart=initialCart.products
+: initialCart=[];
+
 const initialState = {
-    products: []
+    products: initialCart
 }
 
 export function cartReducer(state = initialState, action) {
@@ -21,7 +25,8 @@ export function cartReducer(state = initialState, action) {
             })
 
             if (!productInCart) {
-                return Object.assign({}, state, {
+
+                let items= Object.assign({}, state, {
                     products: [
                         ...state.products,
                         {
@@ -30,19 +35,28 @@ export function cartReducer(state = initialState, action) {
                         }
                     ]
                 })
+                localStorage.setItem("game-start-cart",JSON.stringify(items));
+                return items;
+
             } else {
-                return Object.assign({}, state, {
+                let items= Object.assign({}, state, {
                     products: updatedProducts
                 });
+                localStorage.setItem("game-start-cart",JSON.stringify(items))
+                return items;
+
             }
         case CartConstants.rm:
             const filteredProducts = state.products.filter(product => {
                 return product.id !== action.payload.id
             });
 
-            return Object.assign({}, state, {
+            let items= Object.assign({}, state, {
                 products: filteredProducts
             });
+            localStorage.setItem("game-start-cart",JSON.stringify(items))
+            return items;
+
         default:
             return state;
     }
