@@ -57,6 +57,7 @@ export function cartReducer(state = initialState, action) {
             return items;
         
         case CartConstants.empty:
+            localStorage.setItem("game-start-cart",null)
             return Object.assign({}, state, {
                 products: []
             });

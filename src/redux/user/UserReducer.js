@@ -13,9 +13,12 @@ export function userReducer(state = initialState, action) {
                 loading: true
             });
         case UserConstants.updateUserData:
-            localStorage.setItem("game-start-user",JSON.stringify(action.payload));
+            let user=action.payload;
+            
+                localStorage.setItem("game-start-user",JSON.stringify(user));
+            
             return Object.assign({}, state, {
-                data: action.payload,
+                data: user,
                 loading: false,
                 error: null
             });

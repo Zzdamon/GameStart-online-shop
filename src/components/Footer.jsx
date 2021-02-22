@@ -11,38 +11,38 @@ function Footer() {
         <footer className="pt-3 mt-3 bg-light">
             <div className="container-fluid container-min-max-width d-flex justify-content-between">
                 <div className="footer-group d-flex flex-column">
-                    <h3 className="h5">Link-uri rapide:</h3>
-                    <Link to='/about'>Despre</Link>
-                    <Link to='/terms-and-conditions'>Termeni și condiții</Link>
+                    <h3 className="h5">Quick Links:</h3>
+                    <Link to='/my-account'>My Account</Link>
+                    <Link to='/orders'>My Orders</Link>
                 </div>
                 <div className="footer-group">
-                    <h3 className="h5">Contactează-mă:</h3>
+                    <h3 className="h5">Contact:</h3>
                     <p className="m-0">
-                        <a href="mailto:razvan.cirlugea@gmail.com">
+                        <a href="mailto:damonlepirda@gmail.com">
                             <Mail className="mr-1 mb-1 footer-icon"/>
-                            razvan.cirlugea@gmail.com
+                            damonlepirda@gmail.com
                         </a>
                     </p>
-                    <p className="m-0"><Phone className="mr-1 footer-icon"/>+40728998166</p>
+                    <p className="m-0"><Phone className="mr-1 footer-icon"/>+40731261227</p>
                 </div>
                 <div className="footer-group">
-                    <h3 className="h5">Contactează-mă:</h3>
+                    <h3 className="h5">Contact:</h3>
                     <p className="m-0">
-                        <a href="https://github.com/razvancir96">
+                        <a href="https://github.com/Zzdamon">
                             <GitHub className="mr-1 mb-1 footer-icon"/>
-                            razvancir96
+                            Zzdamon
                         </a>
                     </p>
                     <p className="m-0">
-                        <a href="https://www.linkedin.com/in/razvancirlugea/">
+                        <a href="www.linkedin.com/in/damonlepirda">
                             <LinkedIn className="mr-1 footer-icon"/>
-                            razvancirlugea
+                            damonlepirda
                         </a>
                     </p>
                 </div>
             </div>
             <div className="text-center py-3">
-                &copy; Răzvan Cîrlugea, 2019
+                &copy; Damon Lepîrdă, 2021
             </div>
         </footer>
     );

@@ -71,12 +71,16 @@ function Cart(props) {
                                         if(!initial[props.user.data.email]){
                                             initial[props.user.data.email]=[];
                                         }
-                                        
-                                            initial[props.user.data.email].push(props.products)
+                                            let date=new Date();
+                                            date=date.toDateString();
+
+                                            initial[props.user.data.email].push({products:props.products,
+                                            date:date})
                                         
 
 
                                         localStorage.setItem("game-start-orders",JSON.stringify(initial));
+                                        props.emptyCart();
                                     }}
                                 >Order</button>
                                  </div>

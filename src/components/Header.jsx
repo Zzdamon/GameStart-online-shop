@@ -12,16 +12,18 @@ function Header(props) {
         <header className="border-bottom mb-3">
             <div className="container-fluid container-min-max-width d-flex justify-content-between align-items-center">
                 <Link to="/" className="my-3">
-                    <img src={Logo} alt="Sirluggia Shop" className="logo"/>
+                    <img src={Logo} alt="Game-Start" className="logo"/>
                 </Link>
                 <div>
                     { props.user
-                        ? <p>Salut, {props.user.displayName}!</p>
+                        ?<Link to="/my-account">
+                             <p>Hello, {props.user.displayName}!</p>
+                        </Link>
                         : null
                     }
                     <div className="d-flex justify-content-end">
                         { props.user
-                            ? <p className="logout h5" onClick={() => props.signOut()}>Delogare</p>
+                            ? <p className="logout h5" onClick={() => props.signOut()}>Logout</p>
                             : <Link to="/login" className="h5 mb-0">Login</Link>
                         }
 

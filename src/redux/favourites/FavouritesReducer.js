@@ -1,30 +1,29 @@
 import * as FavConstants from './FavConstants'
 
+let initialFav=JSON.parse(localStorage.getItem("game-start-fav"));
+initialFav? initialFav=initialFav.products
+: initialFav=[];
+
+
 const initialState = {
-    products: []
+    products: initialFav
 }
 
 
 export function favouritesReducer(state = initialState, action) {
     switch (action.type) {
-        case FavConstants.add:
-            // const updatedProducts = state.favourites.map(product => {
-            // if (product.id !== action.payload.product.id)
-            //         return product;
-                
-            // })
-
-           
-           
-                return Object.assign({}, state, {
+        case FavConstants.add:           
+                let items = Object.assign({}, state, {
                     products:[...state.products, action.payload] 
                 })
+                localStorage.setItem("game-start-fav",JSON.stringify(items));
+                 return items;   
             
-
         case FavConstants.rm:
             const filteredProducts = state.products.filter(product => {
                 return product.id !== action.payload.id
             });
+            localStorage.setItem("game-start-fav",JSON.stringify(filteredProducts));
 
             return Object.assign({}, state, {
                 products: filteredProducts
