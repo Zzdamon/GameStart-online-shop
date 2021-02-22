@@ -1,6 +1,7 @@
 import Layout from '../components/Layout';
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Order from '../components/Order';
 
 class Orders extends Component {
@@ -38,7 +39,10 @@ class Orders extends Component {
                    <Order order={order} /> )        
             }   
             </div>
-            : <h5>You don't have any orders!</h5>
+            : <div className="d-flex  flex-column justify-content-center align-items-center">
+            <p className="h3">You don't have any orders!</p>
+            <Link to="/"><button className="btn btn-outline-dark">Inapoi la home</button></Link>
+        </div>
             :  this.props.history.push("/login")
             }
                 </div>
