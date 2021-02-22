@@ -50,13 +50,16 @@ export function cartReducer(state = initialState, action) {
             const filteredProducts = state.products.filter(product => {
                 return product.id !== action.payload.id
             });
-
             let items= Object.assign({}, state, {
                 products: filteredProducts
             });
             localStorage.setItem("game-start-cart",JSON.stringify(items))
             return items;
-
+        
+        case CartConstants.empty:
+            return Object.assign({}, state, {
+                products: []
+            });
         default:
             return state;
     }

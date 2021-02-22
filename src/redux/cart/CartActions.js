@@ -13,3 +13,9 @@ export function removeFromCart(payload) {
         payload
     }
 }
+
+export function emptyCart() {
+    return {
+        type: CartConstants.empty
+    }
+}

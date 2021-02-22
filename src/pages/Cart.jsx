@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import { connect } from 'react-redux';
-import { removeFromCart } from '../redux/cart/CartActions';
+import { emptyCart, removeFromCart } from '../redux/cart/CartActions';
 import { Link } from 'react-router-dom';
 import './Cart.css';
 import { ReactComponent as Close} from '../assets/icons/close.svg';
@@ -55,7 +55,30 @@ function Cart(props) {
                             </div>
                         </div>
                         <div className="container-min-max-width d-flex justify-content-end">
-                                <button className="btn w-25 btn-success mw-6">Order</button>
+                                <button className="btn w-25 btn-success mw-6"
+                                    onClick={()=>{
+                                        if(!props.user.data){
+                                            console.log("push login")
+                                            props.history.push("/login")
+                                            return;
+                                        }
+                                        let initial= JSON.parse(localStorage.getItem("game-start-orders"));
+
+                                        if(!initial){
+                                            initial={
+                                            };
+                                        }
+                                        if(!initial[props.user.data.email]){
+                                            initial[props.user.data.email]=[];
+                                        }
+                                        
+                                            initial[props.user.data.email].push(props.products)
+                                        
+
+
+                                        localStorage.setItem("game-start-orders",JSON.stringify(initial));
+                                    }}
+                                >Order</button>
                                  </div>
                     </div>
                     : <div className="d-flex w-25 flex-column align-items-center">
@@ -70,13 +93,15 @@ function Cart(props) {
 
 function mapStateToProps(state) {
     return {
-        products: state.cart.products
+        products: state.cart.products,
+        user: state.user
     };
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-        removeFromCart: (payload) => dispatch(removeFromCart(payload))
+        removeFromCart: (payload) => dispatch(removeFromCart(payload)),
+        emptyCart: ()=>dispatch(emptyCart())
     };
 }
 
