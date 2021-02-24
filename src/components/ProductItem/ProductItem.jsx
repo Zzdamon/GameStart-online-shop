@@ -1,11 +1,11 @@
 import React from 'react';
 import './ProductItem.css';
 import { connect } from 'react-redux';
-import { addToCart } from '../redux/cart/CartActions';
+import { addToCart } from '../../redux/cart/CartActions';
 import { Link } from 'react-router-dom';
-import { addToFavourites, removeFromFavourites } from '../redux/favourites/FavouritesActions';
-import  { ReactComponent as Favourite} from '../assets/icons/favourite.svg'
-import  { ReactComponent as UnFavourite} from '../assets/icons/favFill.svg'
+import { addToFavourites, removeFromFavourites } from '../../redux/favourites/FavouritesActions';
+import  { ReactComponent as Favourite} from '../../assets/icons/favourite.svg'
+import  { ReactComponent as UnFavourite} from '../../assets/icons/favFill.svg'
 
 // class ProductItem extends React.Component {
 //     // const {name, price, currency, image, id} = props;

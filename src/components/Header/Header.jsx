@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../assets/images/gamestart1.png';
-import { ReactComponent as ShoppingCart } from '../assets/icons/shopping-cart.svg';
+import Logo from '../../assets/images/gamestart1.png';
+import { ReactComponent as ShoppingCart } from '../../assets/icons/shopping-cart.svg';
 import './Header.css';
 import { connect } from 'react-redux';
-import { logoutUser } from '../redux/user/UserActions';
-import  { ReactComponent as Favourites} from '../assets/icons/favFill.svg'
+import { logoutUser } from '../../redux/user/UserActions';
+import  { ReactComponent as Favourites} from '../../assets/icons/favFill.svg'
 
 function Header(props) {
     return(

@@ -1,7 +1,6 @@
 import React from 'react'
-import ProductItem from '../components/ProductItem';
 import { connect } from 'react-redux';
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 import { Link } from 'react-router-dom';
 import ProductList from '../components/ProductList';
 

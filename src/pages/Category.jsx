@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 import products from '../utils/products.json';
 import ProductList from '../components/ProductList';
 

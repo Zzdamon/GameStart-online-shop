@@ -1,12 +1,12 @@
 import React from 'react';
-import Layout from '../components/Layout';
-import products from '../utils/products.json';
+import Layout from '../../components/Layout/Layout';
+import products from '../../utils/products.json';
 import './Product.css';
 import { connect } from 'react-redux';
-import { addToCart } from '../redux/cart/CartActions';
-import { addToFavourites, removeFromFavourites } from '../redux/favourites/FavouritesActions';
-import  { ReactComponent as Favourite} from '../assets/icons/favourite.svg'
-import  { ReactComponent as UnFavourite} from '../assets/icons/favFill.svg'
+import { addToCart } from '../../redux/cart/CartActions';
+import { addToFavourites, removeFromFavourites } from '../../redux/favourites/FavouritesActions';
+import  { ReactComponent as Favourite} from '../../assets/icons/favourite.svg'
+import  { ReactComponent as UnFavourite} from '../../assets/icons/favFill.svg'
 
 class Product extends React.Component {
     constructor(props) {

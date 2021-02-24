@@ -1,6 +1,5 @@
 import React from 'react'
 import OrderProduct from './OrderProduct'
-import ProductItem from './ProductItem'
 
 export default function Order(props) {
     let total=0;
